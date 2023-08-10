@@ -1,0 +1,1 @@
+var observer=new IntersectionObserver(function(b){b.forEach(function(a){console.log(a);a.isIntersecting&&(a.target.classList.add("show"),observer.unobserve(a.target))})}),animated=document.querySelectorAll(".animate");animated.forEach(function(b){return observer.observe(b)});
